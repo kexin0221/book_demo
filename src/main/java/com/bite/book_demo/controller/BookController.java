@@ -1,5 +1,6 @@
 package com.bite.book_demo.controller;
 
+import com.bite.book_demo.enums.BookStatusEnum;
 import com.bite.book_demo.model.BookInfo;
 import com.bite.book_demo.model.PageRequest;
 import com.bite.book_demo.model.ResponseResult;
@@ -77,6 +78,21 @@ public class BookController {
         } catch (Exception e) {
             log.error("修改图书发生异常，e: ", e);
             return "修改图书发生异常...";
+        }
+    }
+
+    @RequestMapping("/deleteBook")
+    public String deleteBook(Integer bookId) {
+        log.info("删除图书, bookId: {}", bookId);
+        try {
+            BookInfo bookInfo = new BookInfo();
+            bookInfo.setId(bookId);
+            bookInfo.setStatus(BookStatusEnum.DELETED.getCode());
+            bookService.updateBook(bookInfo);
+            return "";
+        } catch (Exception e) {
+            log.error("删除图书发生异常，e: ", e);
+            return "删除图书发生异常...";
         }
     }
 }

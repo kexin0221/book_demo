@@ -102,8 +102,17 @@
         function deleteBook(id) {
             var isDelete = confirm("确认删除?");
             if (isDelete) {
-                //删除图书
-                alert("删除成功");
+                $.ajax({
+                   type: "post",
+                   url: "book/deleteBook?bookId=" + id,
+                   success: function (result) {
+                       if (result === "") {
+                           location.href = "book_list.html";
+                       } else {
+                           alert(result);
+                       }
+                   }
+                });
             }
         }
         function batchDelete() {
