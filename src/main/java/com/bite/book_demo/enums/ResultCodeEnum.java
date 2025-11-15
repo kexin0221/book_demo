@@ -5,9 +5,6 @@ public enum ResultCodeEnum {
     SUCCESS(200),
     FAIL(-2);
 
-    private int code;
-
     ResultCodeEnum(int code) {
-        this.code = code;
     }
 }
