@@ -102,15 +102,15 @@
             const isDelete = confirm("确认删除?");
             if (isDelete) {
                 $.ajax({
-                   type: "post",
-                   url: "book/deleteBook?bookId=" + id,
-                   success: function (result) {
-                       if (result === "") {
-                           location.href = "book_list.html";
-                       } else {
-                           alert(result);
-                       }
-                   }
+                    type: "post",
+                    url: "book/deleteBook?bookId=" + id,
+                    success: function (result) {
+                        if (result === "") {
+                            location.href = "book_list.html";
+                        } else {
+                            alert(result);
+                        }
+                    }
                 });
             }
         }
@@ -123,7 +123,17 @@
                     ids.push($(this).val());
                 });
                 console.log(ids);
-                alert("批量删除成功");
+                $.ajax({
+                    type: "post",
+                    url: "book/batchDelete?ids=" + ids,
+                    success: function (result) {
+                        if (result) {
+                            location.href = "book_list.html";
+                        } else {
+                            alert("批量删除失败...");
+                        }
+                    }
+                });
             }
         }
 

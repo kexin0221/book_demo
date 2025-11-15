@@ -98,33 +98,42 @@
             });
         }
 
-
         function deleteBook(id) {
-            var isDelete = confirm("确认删除?");
+            const isDelete = confirm("确认删除?");
             if (isDelete) {
                 $.ajax({
-                   type: "post",
-                   url: "book/deleteBook?bookId=" + id,
-                   success: function (result) {
-                       if (result === "") {
-                           location.href = "book_list.html";
-                       } else {
-                           alert(result);
-                       }
-                   }
+                    type: "post",
+                    url: "book/deleteBook?bookId=" + id,
+                    success: function (result) {
+                        if (result === "") {
+                            location.href = "book_list.html";
+                        } else {
+                            alert(result);
+                        }
+                    }
                 });
             }
         }
         function batchDelete() {
-            var isDelete = confirm("确认批量删除?");
+            const isDelete = confirm("确认批量删除?");
             if (isDelete) {
                 //获取复选框的id
-                var ids = [];
+                const ids = [];
                 $("input:checkbox[name='selectBook']:checked").each(function () {
                     ids.push($(this).val());
                 });
                 console.log(ids);
-                alert("批量删除成功");
+                $.ajax({
+                    type: "post",
+                    url: "book/batchDelete?ids=" + ids,
+                    success: function (result) {
+                        if (result) {
+                            location.href = "book_list.html";
+                        } else {
+                            alert("批量删除失败...");
+                        }
+                    }
+                });
             }
         }
 

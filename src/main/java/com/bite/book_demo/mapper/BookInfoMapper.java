@@ -24,4 +24,6 @@ public interface BookInfoMapper {
     BookInfo queryBookById(Integer bookId);
 
     Integer updateBook(BookInfo bookInfo);  // 使用XML动态SQL
+
+    Integer batchDelete(List<Integer> ids);
 }

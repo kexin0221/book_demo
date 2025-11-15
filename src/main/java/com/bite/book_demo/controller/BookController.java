@@ -1,15 +1,19 @@
 package com.bite.book_demo.controller;
 
+import com.bite.book_demo.constant.Constants;
 import com.bite.book_demo.enums.BookStatusEnum;
-import com.bite.book_demo.model.BookInfo;
-import com.bite.book_demo.model.PageRequest;
-import com.bite.book_demo.model.ResponseResult;
+import com.bite.book_demo.enums.ResultCodeEnum;
+import com.bite.book_demo.model.*;
 import com.bite.book_demo.service.BookService;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @Slf4j
 @RequestMapping("/book")
@@ -59,8 +63,13 @@ public class BookController {
     }
 
     @RequestMapping("/getListByPage")
-    public ResponseResult<BookInfo> getListByPage(PageRequest pageRequest) {
-        return bookService.getListByPage(pageRequest);
+    public Result<ResponseResult<BookInfo>> getListByPage(PageRequest pageRequest, HttpSession session) {
+        UserInfo userInfo = (UserInfo) session.getAttribute(Constants.SESSION_USER_KEY);
+        if (userInfo == null || userInfo.getId() <= 0) {
+            // 用户未登录
+            return new Result<>(ResultCodeEnum.UNLOGIN, "用户未登录", null);
+        }
+        return new Result<>(ResultCodeEnum.SUCCESS, "", bookService.getListByPage(pageRequest));
     }
 
     @RequestMapping("/queryBookById")
@@ -93,6 +102,18 @@ public class BookController {
         } catch (Exception e) {
             log.error("删除图书发生异常，e: ", e);
             return "删除图书发生异常...";
+        }
+    }
+
+    @RequestMapping("/batchDelete")
+    public Boolean batchDelete(@RequestParam List<Integer> ids) {
+        log.info("批量删除图书, ids: {}", ids);
+        try {
+            bookService.batchDelete(ids);
+            return true;
+        } catch (Exception e) {
+            log.error("批量删除图书失败, e: ", e);
+            return false;
         }
     }
 }

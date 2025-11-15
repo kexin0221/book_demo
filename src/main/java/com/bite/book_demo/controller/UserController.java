@@ -1,5 +1,6 @@
 package com.bite.book_demo.controller;
 
+import com.bite.book_demo.constant.Constants;
 import com.bite.book_demo.model.UserInfo;
 import com.bite.book_demo.service.UserInfoService;
 import jakarta.servlet.http.HttpSession;
@@ -30,7 +31,7 @@ public class UserController {
             return false;
         }
         if (password.equals(userInfo.getPassword())) {
-            session.setAttribute("session_user_info", userInfo);
+            session.setAttribute(Constants.SESSION_USER_KEY, userInfo);
             return true;
         }
 
