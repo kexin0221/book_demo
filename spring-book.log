@@ -1,61 +1,39 @@
-2025-11-15T15:36:19.412+08:00  INFO 29564 --- [main] com.bite.book_demo.BookDemoApplication   : Starting BookDemoApplication using Java 17.0.17 with PID 29564 (D:\code\java\book_demo\target\classes started by MouKexin in D:\code\java\book_demo)
-2025-11-15T15:36:19.416+08:00  INFO 29564 --- [main] com.bite.book_demo.BookDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-11-15T15:36:20.044+08:00  INFO 29564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-11-15T15:36:20.055+08:00  INFO 29564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-15T15:36:20.057+08:00  INFO 29564 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-15T15:36:20.093+08:00  INFO 29564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-15T15:36:20.093+08:00  INFO 29564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 643 ms
-2025-11-15T15:36:20.481+08:00  INFO 29564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-11-15T15:36:20.487+08:00  INFO 29564 --- [main] com.bite.book_demo.BookDemoApplication   : Started BookDemoApplication in 1.467 seconds (process running for 1.927)
-2025-11-15T15:36:23.974+08:00  INFO 29564 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-15T15:36:23.974+08:00  INFO 29564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-11-15T15:36:23.975+08:00  INFO 29564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-11-15T15:36:31.060+08:00  INFO 29564 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-15T15:36:31.479+08:00  INFO 29564 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56d9da9f
-2025-11-15T15:36:31.484+08:00  INFO 29564 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-15T15:42:20.565+08:00  INFO 29564 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-15T15:42:20.704+08:00  INFO 29564 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-11-15T15:42:20.707+08:00  INFO 29564 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-11-15T15:42:20.711+08:00  INFO 29564 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-11-15T16:13:04.172+08:00  INFO 16308 --- [main] com.bite.book_demo.BookDemoApplication   : Starting BookDemoApplication using Java 17.0.17 with PID 16308 (D:\code\java\book_demo\target\classes started by MouKexin in D:\code\java\book_demo)
-2025-11-15T16:13:04.174+08:00  INFO 16308 --- [main] com.bite.book_demo.BookDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-11-15T16:13:04.928+08:00  INFO 16308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-11-15T16:13:04.949+08:00  INFO 16308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-15T16:13:04.949+08:00  INFO 16308 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-15T16:13:04.996+08:00  INFO 16308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-15T16:13:04.996+08:00  INFO 16308 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 778 ms
-2025-11-15T16:13:05.546+08:00  INFO 16308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-11-15T16:13:05.555+08:00  INFO 16308 --- [main] com.bite.book_demo.BookDemoApplication   : Started BookDemoApplication in 1.757 seconds (process running for 2.145)
-2025-11-15T16:13:42.206+08:00  INFO 16308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-15T16:13:42.206+08:00  INFO 16308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-11-15T16:13:42.207+08:00  INFO 16308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-11-15T16:13:42.235+08:00  WARN 16308 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'ids' for method parameter type List is not present]
-2025-11-15T16:13:58.496+08:00  INFO 16308 --- [http-nio-8080-exec-1] c.b.book_demo.controller.BookController  : 批量删除图书, ids: [9, 10, 11]
-2025-11-15T16:13:58.526+08:00  INFO 16308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-15T16:13:58.612+08:00  INFO 16308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45c9685b
-2025-11-15T16:13:58.614+08:00  INFO 16308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-15T16:19:57.472+08:00  INFO 16308 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-15T16:19:57.610+08:00  INFO 16308 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-11-15T16:19:57.612+08:00  INFO 16308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-11-15T16:19:57.616+08:00  INFO 16308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-11-15T16:23:46.432+08:00  INFO 14788 --- [main] com.bite.book_demo.BookDemoApplication   : Starting BookDemoApplication using Java 17.0.17 with PID 14788 (D:\code\java\book_demo\target\classes started by MouKexin in D:\code\java\book_demo)
-2025-11-15T16:23:46.434+08:00  INFO 14788 --- [main] com.bite.book_demo.BookDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-11-15T16:23:46.989+08:00  INFO 14788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-11-15T16:23:46.996+08:00  INFO 14788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-15T16:23:46.997+08:00  INFO 14788 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-15T16:23:47.030+08:00  INFO 14788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-15T16:23:47.031+08:00  INFO 14788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 568 ms
-2025-11-15T16:23:47.377+08:00  INFO 14788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-11-15T16:23:47.383+08:00  INFO 14788 --- [main] com.bite.book_demo.BookDemoApplication   : Started BookDemoApplication in 1.268 seconds (process running for 1.616)
-2025-11-15T16:24:25.177+08:00  INFO 14788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-15T16:24:25.178+08:00  INFO 14788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-11-15T16:24:25.180+08:00  INFO 14788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-11-15T16:24:25.486+08:00  INFO 14788 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-15T16:24:25.930+08:00  INFO 14788 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3176def3
-2025-11-15T16:24:25.936+08:00  INFO 14788 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-15T16:24:32.977+08:00  INFO 14788 --- [http-nio-8080-exec-5] c.b.book_demo.controller.BookController  : 批量删除图书, ids: [15, 16, 17]
-2025-11-15T20:10:39.511+08:00  WARN 14788 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30m13s216ms42µs100ns).
-2025-11-15T21:14:12.432+08:00  INFO 14788 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-15T21:14:13.007+08:00  INFO 14788 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-11-15T21:14:13.015+08:00  INFO 14788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-11-15T21:14:13.020+08:00  INFO 14788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-16T12:19:40.021+08:00  INFO 38628 --- [main] com.bite.book_demo.BookDemoApplication   : Starting BookDemoApplication using Java 17.0.17 with PID 38628 (D:\code\java\book_demo\target\classes started by MouKexin in D:\code\java\book_demo)
+2025-11-16T12:19:40.025+08:00  INFO 38628 --- [main] com.bite.book_demo.BookDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-16T12:19:40.561+08:00  INFO 38628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-16T12:19:40.569+08:00  INFO 38628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-16T12:19:40.569+08:00  INFO 38628 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-16T12:19:40.601+08:00  INFO 38628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-16T12:19:40.602+08:00  INFO 38628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2025-11-16T12:19:40.945+08:00  INFO 38628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-16T12:19:40.950+08:00  INFO 38628 --- [main] com.bite.book_demo.BookDemoApplication   : Started BookDemoApplication in 1.297 seconds (process running for 1.734)
+2025-11-16T12:19:43.710+08:00  INFO 38628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-16T12:19:43.711+08:00  INFO 38628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-16T12:19:43.711+08:00  INFO 38628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-16T12:19:43.765+08:00  INFO 38628 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-16T12:19:43.843+08:00  INFO 38628 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37fefea1
+2025-11-16T12:19:43.844+08:00  INFO 38628 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-16T12:36:37.084+08:00  INFO 38628 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-16T12:36:37.770+08:00  INFO 38628 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-16T12:36:37.776+08:00  INFO 38628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-16T12:36:37.792+08:00  INFO 38628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-16T12:36:39.866+08:00  INFO 43228 --- [main] com.bite.book_demo.BookDemoApplication   : Starting BookDemoApplication using Java 17.0.17 with PID 43228 (D:\code\java\book_demo\target\classes started by MouKexin in D:\code\java\book_demo)
+2025-11-16T12:36:39.868+08:00  INFO 43228 --- [main] com.bite.book_demo.BookDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-16T12:36:40.344+08:00  INFO 43228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-16T12:36:40.350+08:00  INFO 43228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-16T12:36:40.351+08:00  INFO 43228 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-16T12:36:40.381+08:00  INFO 43228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-16T12:36:40.381+08:00  INFO 43228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 487 ms
+2025-11-16T12:36:40.697+08:00  INFO 43228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-16T12:36:40.702+08:00  INFO 43228 --- [main] com.bite.book_demo.BookDemoApplication   : Started BookDemoApplication in 1.136 seconds (process running for 1.457)
+2025-11-16T12:36:45.763+08:00  INFO 43228 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-16T12:36:45.764+08:00  INFO 43228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-16T12:36:45.764+08:00  INFO 43228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-16T12:36:54.227+08:00  INFO 43228 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-16T12:36:54.571+08:00  INFO 43228 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3846a7e5
+2025-11-16T12:36:54.577+08:00  INFO 43228 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-16T14:26:31.810+08:00  WARN 43228 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s492ms904µs900ns).
+2025-11-16T14:36:36.455+08:00  INFO 43228 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-16T14:36:37.089+08:00  INFO 43228 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-16T14:36:37.095+08:00  INFO 43228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-16T14:36:37.102+08:00  INFO 43228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
