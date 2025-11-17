@@ -1,8 +1,6 @@
 package com.bite.book_demo.interceptor;
 
 import com.bite.book_demo.constant.Constants;
-import com.bite.book_demo.enums.ResultCodeEnum;
-import com.bite.book_demo.model.Result;
 import com.bite.book_demo.model.UserInfo;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

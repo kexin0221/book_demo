@@ -1,6 +1,5 @@
 package com.bite.book_demo.controller;
 
-import com.bite.book_demo.constant.Constants;
 import com.bite.book_demo.enums.BookStatusEnum;
 import com.bite.book_demo.enums.ResultCodeEnum;
 import com.bite.book_demo.model.*;
@@ -63,7 +62,7 @@ public class BookController {
     }
 
     @RequestMapping("/getListByPage")
-    public Result<ResponseResult<BookInfo>> getListByPage(PageRequest pageRequest, HttpSession session) {
+    public Result<ResponseResult<BookInfo>> getListByPage(PageRequest pageRequest) {
         return new Result<>(ResultCodeEnum.SUCCESS, "", bookService.getListByPage(pageRequest));
     }
 
