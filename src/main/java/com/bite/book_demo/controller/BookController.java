@@ -4,7 +4,6 @@ import com.bite.book_demo.enums.BookStatusEnum;
 import com.bite.book_demo.enums.ResultCodeEnum;
 import com.bite.book_demo.model.*;
 import com.bite.book_demo.service.BookService;
-import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
