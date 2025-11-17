@@ -4,11 +4,13 @@ import com.bite.book_demo.constant.Constants;
 import com.bite.book_demo.model.UserInfo;
 import com.bite.book_demo.service.UserInfoService;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RequestMapping("/user")
 @RestController
 public class UserController {
@@ -17,6 +19,7 @@ public class UserController {
 
     @RequestMapping("/login")
     public boolean login(String name, String password, HttpSession session) {
+        log.info("用户登录, name: {}", name);
         if (!StringUtils.hasLength(name) || !StringUtils.hasLength(password)) {
             return false;
         }

@@ -99,6 +99,12 @@
                             }
                         }
                     });
+                },
+                error: function (error) {
+                    if (error.status === 401) {
+                        alert("用户未登录，请先登录");
+                        location.href = "login.html";
+                    }
                 }
             });
         }

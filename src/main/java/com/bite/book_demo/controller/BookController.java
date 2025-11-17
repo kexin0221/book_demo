@@ -64,14 +64,6 @@ public class BookController {
 
     @RequestMapping("/getListByPage")
     public Result<ResponseResult<BookInfo>> getListByPage(PageRequest pageRequest, HttpSession session) {
-        if (session.getAttribute(Constants.SESSION_USER_KEY) == null) {
-            return new Result<>(ResultCodeEnum.UNLOGIN, "用户未登录", null);
-        }
-        UserInfo userInfo = (UserInfo) session.getAttribute(Constants.SESSION_USER_KEY);
-        if (userInfo == null || userInfo.getId() <= 0) {
-            // 用户未登录
-            return new Result<>(ResultCodeEnum.UNLOGIN, "用户未登录", null);
-        }
         return new Result<>(ResultCodeEnum.SUCCESS, "", bookService.getListByPage(pageRequest));
     }
 
