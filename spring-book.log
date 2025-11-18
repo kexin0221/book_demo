@@ -219,3 +219,7 @@
 2025-11-17T17:19:30.260+08:00  INFO 20320 --- [http-nio-8080-exec-10] c.b.b.interceptor.LoginInterceptor       : afterCompletion...
 2025-11-17T18:17:59.754+08:00  WARN 20320 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m33s39ms881µs400ns).
 2025-11-17T19:02:54.356+08:00  WARN 20320 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m54s77ms356µs).
+2025-11-17T21:27:30.344+08:00  INFO 20320 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-17T21:27:30.949+08:00  INFO 20320 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-17T21:27:30.955+08:00  INFO 20320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T21:27:30.959+08:00  INFO 20320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
