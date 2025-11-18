@@ -64,15 +64,26 @@
         $.ajax({
             type: "get",
             url: "book/queryBookById" + location.search,
-            success: function (bookinfo) {
-                if (bookinfo != null) {
-                    $("#bookId").val(bookinfo.id);
-                    $("#bookName").val(bookinfo.bookName);
-                    $("#bookAuthor").val(bookinfo.author);
-                    $("#bookStock").val(bookinfo.count);
-                    $("#bookPrice").val(bookinfo.price);
-                    $("#bookPublisher").val(bookinfo.publish);
-                    $("#bookStatus").val(bookinfo.status);
+            success: function (result) {
+                if (result.code === "SUCCESS" && result.data != null) {
+                    let bookinfo = result.data;
+                    if (bookinfo != null) {
+                        $("#bookId").val(bookinfo.id);
+                        $("#bookName").val(bookinfo.bookName);
+                        $("#bookAuthor").val(bookinfo.author);
+                        $("#bookStock").val(bookinfo.count);
+                        $("#bookPrice").val(bookinfo.price);
+                        $("#bookPublisher").val(bookinfo.publish);
+                        $("#bookStatus").val(bookinfo.status);
+                    }
+                } else {
+                    console.log(result);
+                }
+            },
+            error: function (error) {
+                if (error.status === 401) {
+                    // 用户未登录
+                    location.href = "login.html";
                 }
             }
         });
@@ -84,10 +95,16 @@
             url: "book/updateBook",
             data: $("#updateBook").serialize(),
             success: function (result) {
-                if (result === "") {
+                if (result.code === "SUCCESS" && result.data === "") {
                     location.href = "book_list.html";
                 } else {
-                    alert(result);
+                    alert(result.errMsg);
+                }
+            },
+            error: function (error) {
+                if (error.status === 401) {
+                    alert("用户未登录，请先登录");
+                    location.href = "login.html";
                 }
             }
         });

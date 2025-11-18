@@ -116,10 +116,16 @@
                     type: "post",
                     url: "book/deleteBook?bookId=" + id,
                     success: function (result) {
-                        if (result === "") {
+                        if (result.code === "SUCCESS" && result.data === "") {
                             location.href = "book_list.html";
                         } else {
-                            alert(result);
+                            alert(result.errMsg);
+                        }
+                    },
+                    error: function (error) {
+                        if (error.status === 401) {
+                            alert("用户未登录，请先登录");
+                            location.href = "login.html";
                         }
                     }
                 });
@@ -138,10 +144,16 @@
                     type: "post",
                     url: "book/batchDelete?ids=" + ids,
                     success: function (result) {
-                        if (result) {
+                        if (result.code === "SUCCESS" && result.data === true) {
                             location.href = "book_list.html";
                         } else {
                             alert("批量删除失败...");
+                        }
+                    },
+                    error: function (error) {
+                        if (error.status === 401) {
+                            alert("用户未登录，请先登录");
+                            location.href = "login.html";
                         }
                     }
                 });

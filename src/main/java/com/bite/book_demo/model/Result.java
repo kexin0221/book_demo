@@ -12,4 +12,5 @@ public class Result<T> {
     private ResultCodeEnum code;  // -1 未登录   -2 出错了    200 正常
     private String errMsg;
     private T data;
+
 }

@@ -71,11 +71,17 @@
             url: "/book/addBook",
             data: $("#addBook").serialize(),
             success:function (result) {
-                if (result === "") {
+                if (result.code === "SUCCESS" && result.data === "") {
                     // 添加图书成功
                     location.href = "book_list.html";
                 } else {
-                    alert(result);
+                    alert(result.errMsg);
+                }
+            },
+            error: function (error) {
+                if (error.status === 401) {
+                    alert("用户未登录，请先登录");
+                    location.href = "login.html";
                 }
             }
         });

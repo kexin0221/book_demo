@@ -21,7 +21,7 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping("/addBook")
+    @RequestMapping(value = "/addBook", produces = "application/json")
     public String addBook(BookInfo bookInfo) {
         log.info("添加图书, request: {}", bookInfo);
         //1. 参数校验
@@ -72,29 +72,29 @@ public class BookController {
     }
 
     @RequestMapping("/updateBook")
-    public String updateBook(BookInfo bookInfo) {
+    public Result updateBook(BookInfo bookInfo) {
         log.info("修改图书, bookInfo: {}", bookInfo);
         try {
             bookService.updateBook(bookInfo);
-            return "";
+            return new Result<>(ResultCodeEnum.SUCCESS, "", "");
         } catch (Exception e) {
             log.error("修改图书发生异常，e: ", e);
-            return "修改图书发生异常...";
+            return new Result<>(ResultCodeEnum.FAIL, "修改图书发生异常", "");
         }
     }
 
     @RequestMapping("/deleteBook")
-    public String deleteBook(Integer bookId) {
+    public Result deleteBook(Integer bookId) {
         log.info("删除图书, bookId: {}", bookId);
         try {
             BookInfo bookInfo = new BookInfo();
             bookInfo.setId(bookId);
             bookInfo.setStatus(BookStatusEnum.DELETED.getCode());
             bookService.updateBook(bookInfo);
-            return "";
+            return new Result<>(ResultCodeEnum.SUCCESS, "", "");
         } catch (Exception e) {
             log.error("删除图书发生异常，e: ", e);
-            return "删除图书发生异常...";
+            return new Result<>(ResultCodeEnum.FAIL, "删除图书发生异常", "");
         }
     }
 
