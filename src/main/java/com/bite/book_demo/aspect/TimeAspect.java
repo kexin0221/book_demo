@@ -17,7 +17,7 @@ public class TimeAspect {
         // 2.执行目标方法
         Object proceed = pjp.proceed();
         long end = System.currentTimeMillis();
-        log.info(pjp.getSignature().toString() + "耗时：" + (end - start) + "ms.");
+        log.info("{}耗时：{}ms.", pjp.getSignature().toString(), end - start);
         return proceed;
     }
 }
